@@ -1,3 +1,6 @@
+/*
+
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -134,7 +137,7 @@ registro *inicializarAgenda(FILE *ptr){
 
   while(!feof(ptr)){
     corrente = alocaNovoContado();
-    fscanf(ptr, "%s\n%s\n%s\n%d\n%s\n%s\n", corrente->nomeCompleto, corrente->celular, corrente->endereco, &corrente->CEP, corrente->dataNascimento,lixo);
+    fscanf(ptr, "%s\n%s\n%s\n%d\n%s\n%s\n", corrente->nomeCompleto, corrente->celular, corrente->endereco, &corrente->CEP, corrente->dataNascimento, lixo);
     //fscanf(ptr,"%s", &lixo);
     if(primeiroRegistro){
       head = corrente;
@@ -181,17 +184,19 @@ void freeAll(registro *head){
 }
 
 void visualizarTodosRegistros(registro *head){
-
+registro* aux = head;
 /* imprime primeiro elemento */
-printf("%s\n", head->nomeCompleto);
-      printf("%s\n", head->celular);
-      printf("%s\n", head->endereco);
-      printf("%d\n", head->CEP);
-      printf("%s\n", head->dataNascimento);
+      printf("%s\n", aux->nomeCompleto);
+      printf("%s\n", aux->celular);
+      printf("%s\n", aux->endereco);
+	  printf("%d\n", aux->CEP);
+      printf("%s\n", aux->dataNascimento);
 
 /* imprime sub-lista */
-visualizarTodosRegistros(head->seguinte);
+for (aux = head; aux != NULL; aux = aux->seguinte) {
 
+	visualizarTodosRegistros(aux->seguinte);
+	}
 }
 
 void visualizarRegistro(registro *head){
@@ -204,9 +209,8 @@ void visualizarRegistro(registro *head){
       printf("%s\n", corrente->nomeCompleto);
       printf("%s\n", corrente->celular);
       printf("%s\n", corrente->endereco);
-      printf("%d\n", corrente->CEP);
+	  printf("%d\n", corrente->CEP);
       printf("%s\n", corrente->dataNascimento);
-      return;
     }
     corrente = corrente->seguinte;
   }
