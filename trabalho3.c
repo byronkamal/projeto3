@@ -1,5 +1,11 @@
 /*
-
+Estrutura de Dados 1.
+  Turma B.
+  Projeto 2.
+  Alunos: Igor Guimarães Veludo         - 13/0028240
+          Byron Kamal B Correa          - 15/0007281
+          Gabriel Alves Soares de Souza - 15/0009917
+  Professor: Matheus Mendelson
 */
 #include <stdio.h>
 #include <stdlib.h>
