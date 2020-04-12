@@ -1,2 +1,3 @@
 # projetos-eda
-Projetos desenvolvidos para a disciplina EDA - Estrutura de Dados e Algoritmos - UnB
+
+#### Projetos desenvolvidos na linguagem C durante a disciplina de Estrutura de Dados e Algoritmos - UnB
